@@ -24,19 +24,23 @@ class UnitsAPI {
             die('Cannot find the specified measurement units.');
         }
 
+        $unitFrom = $this->units[$from];
+        $unitTo = $this->units[$to];
+
         // Only convert with like kinds
-        if ($this->units[$from]['kind'] != $this->units[$to]['kind']) {
+        if ($unitFrom['kind'] != $unitTo['kind']) {
             die('Cannot convert between different kinds of measurement units.');
         }
 
         // Execute the conversion factors differently based on the kind.  For example, temperature needs to be executed differently.
-        switch ($this->units[$from]['kind']) {
+        switch ($unitFrom['kind']) {
             case 'temperature':
-                $result = _unitsapi_convert_temperature($value, $this->units[$to]['factor'][$from]);
+                die('TODO temperature');
+                //$result = _unitsapi_convert_temperature($value, $unitTo['factor'][$from]);
                 break;
             default:
-                $from_si = $this->units[$from]['factors']['default'];
-                $to_si = $this->units[$to]['factors']['default'];
+                $from_si = $unitFrom['factors']['default'];
+                $to_si = $unitTo['factors']['default'];
                 $from_convert = $value * $from_si;
                 $result = $from_convert / $to_si;
         }
@@ -47,8 +51,8 @@ class UnitsAPI {
         $result_array = array(
             'value' => $value,
             'result' => $result,
-            'from' => $this->units[$from],
-            'to' => $this->units[$to],
+            'from' => $unitFrom,
+            'to' => $unitTo,
         );
 
         return $result_array;
@@ -62,6 +66,10 @@ class UnitsAPI {
         foreach ($groupedUnits as $kind => $group) {
             foreach ($group as $unit) {
                 $unit['kind'] = $kind;
+                foreach ($unit['factors'] as $k => $factor) {
+                    $unit['factors'][$k] = str_replace(' ', '', $unit['factors'][$k]);
+                    $unit['factors'][$k] = str_replace(array('—', '−', '–'), '-', $unit['factors'][$k]);
+                }
                 $units[$unit['key']] = $unit;
             }
         }
