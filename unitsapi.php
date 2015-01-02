@@ -1,9 +1,7 @@
 <?php
 
-/*
 $api = new UnitsAPI();
 print_r($api->convert(5, 'kilometer', 'mile'));
-*/
 
 class UnitsAPI {
 
@@ -48,14 +46,16 @@ class UnitsAPI {
         // Round to the 6 spaces after the decimal.
         $result = round($result, 6);
 
-        $result_array = array(
-            'value' => $value,
-            'result' => $result,
-            'from' => $unitFrom,
-            'to' => $unitTo,
+        return array(
+            'from' => array(
+                'value' => $value,
+                'unit' => $unitFrom
+            ),
+            'to' => array(
+                'value' => $result,
+                'unit' => $unitTo
+            )
         );
-
-        return $result_array;
     }
 
     private function loadUnits() {
