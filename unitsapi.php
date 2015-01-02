@@ -1,8 +1,8 @@
 <?php
-
+/*
 $api = new UnitsAPI();
 print_r($api->convert(5, 'kilometer', 'mile'));
-
+*/
 class UnitsAPI {
 
     private $units;
