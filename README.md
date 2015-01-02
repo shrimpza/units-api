@@ -1,6 +1,6 @@
-# Unit API
+# Units API
 
-Unit of measure conversion API, based on the work done by 
+Units of measure conversion API, based on the work done by 
 [Units API for Drupal](https://www.drupal.org/project/unitsapi), though 
 decoupled from Drupal and usable as a hosted service as well as a PHP library.
 

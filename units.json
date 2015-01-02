@@ -1,0 +1,703 @@
+{
+    "length": {
+        "millimeter": {
+            "key": "millimeter",
+            "singular": "millimeter",
+            "plural": "millimeters",
+            "symbol": "mm",
+            "factors": {
+                "default": "0.001"
+            }
+        },
+        "centimeter": {
+            "key": "centimeter",
+            "singular": "centimeter",
+            "plural": "centimeters",
+            "symbol": "cm",
+            "factors": {
+                "default": "0.01"
+            }
+        },
+        "decimeter": {
+            "key": "decimeter",
+            "singular": "decimeter",
+            "plural": "decimeters",
+            "symbol": "dm",
+            "factors": {
+                "default": "0.1"
+            }
+        },
+        "meter": {
+            "key": "meter",
+            "singular": "meter",
+            "plural": "meters",
+            "symbol": "m",
+            "factors": {
+                "default": "1"
+            }
+        },
+        "kilometer": {
+            "key": "kilometer",
+            "singular": "kilometer",
+            "plural": "kilometers",
+            "symbol": "km",
+            "factors": {
+                "default": "1000"
+            }
+        },
+        "foot": {
+            "key": "foot",
+            "singular": "foot",
+            "plural": "feet",
+            "symbol": "ft",
+            "factors": {
+                "default": "3.048 E-01"
+            }
+        },
+        "inch": {
+            "key": "inch",
+            "singular": "inch",
+            "plural": "inches",
+            "symbol": "in",
+            "factors": {
+                "default": "2.54 E-02"
+            }
+        },
+        "mile": {
+            "key": "mile",
+            "singular": "mile",
+            "plural": "miles",
+            "symbol": "mi",
+            "factors": {
+                "default": "1.609 344 E+03"
+            }
+        },
+        "yard": {
+            "key": "yard",
+            "singular": "yard",
+            "plural": "yards",
+            "symbol": "yd",
+            "factors": {
+                "default": "9.144 E-01"
+            }
+        }
+    },
+    "volume": {
+        "cubic foot": {
+            "key": "cubic foot",
+            "singular": "cubic foot",
+            "plural": "cubic feet",
+            "symbol": "ft3",
+            "factors": {
+                "default": "2.831 685 E-02"
+            }
+        },
+        "cubic inch": {
+            "key": "cubic inch",
+            "singular": "cubic inch",
+            "plural": "cubic inches",
+            "symbol": "in3",
+            "factors": {
+                "default": "1.638 706 E-05"
+            }
+        },
+        "cubic mile": {
+            "key": "cubic mile",
+            "singular": "cubic mile",
+            "plural": "cubic miles",
+            "symbol": "mi3",
+            "factors": {
+                "default": "4.168 182 E+09"
+            }
+        },
+        "cubic yard": {
+            "key": "cubic yard",
+            "singular": "cubic yard",
+            "plural": "cubic yards",
+            "symbol": "yd3",
+            "factors": {
+                "default": "7.645 549 E-01"
+            }
+        },
+        "cup": {
+            "key": "cup",
+            "singular": "cup",
+            "plural": "cups",
+            "symbol": "cup",
+            "factors": {
+                "default": "2.365 882 E-04"
+            }
+        },
+        "imperial gallon": {
+            "key": "imperial gallon",
+            "singular": "Imperial gallon",
+            "plural": "Imperial gallons",
+            "symbol": "gal",
+            "factors": {
+                "default": "4.546 09 E-03"
+            }
+        },
+        "us gallon": {
+            "key": "us gallon",
+            "singular": "US gallon",
+            "plural": "US gallons",
+            "symbol": "gal",
+            "factors": {
+                "default": "3.785 412 E-03"
+            }
+        },
+        "milliliter": {
+            "key": "milliliter",
+            "singular": "milliliter",
+            "plural": "milliliters",
+            "symbol": "mL",
+            "factors": {
+                "default": "0.000001"
+            }
+        },
+        "liter": {
+            "key": "liter",
+            "singular": "liter",
+            "plural": "liters",
+            "symbol": "L",
+            "factors": {
+                "default": "1 E-03"
+            }
+        },
+        "imperial fluid ounce": {
+            "key": "imperial fluid ounce",
+            "singular": "Imperial fluid ounce",
+            "plural": "Imperial fluid ounces",
+            "symbol": "fl oz",
+            "factors": {
+                "default": "2.841 306 E-05"
+            }
+        },
+        "us fluid ounce": {
+            "key": "us fluid ounce",
+            "singular": "US fluid ounce",
+            "plural": "US fluid ounces",
+            "symbol": "fl oz",
+            "factors": {
+                "default": "2.957 353 E-05"
+            }
+        },
+        "imperial pint": {
+            "key": "imperial pint",
+            "singular": "Imperial pint",
+            "plural": "Imperial pints",
+            "symbol": "pt",
+            "factors": {
+                "default": "5.68261 25 E-04"
+            }
+        },
+        "us liquid pint": {
+            "key": "us liquid pint",
+            "singular": "US pint (liquid)",
+            "plural": "US pints (liquid)",
+            "symbol": "pt",
+            "factors": {
+                "default": "4.731 765 E-04"
+            }
+        },
+        "us dry pint": {
+            "key": "us dry pint",
+            "singular": "US pint (dry)",
+            "plural": "US pints (dry)",
+            "symbol": "pt",
+            "factors": {
+                "default": "5.506 105 E-04"
+            }
+        },
+        "imperial quart": {
+            "key": "imperial quart",
+            "singular": "Imperial quart",
+            "plural": "Imperial quarts",
+            "symbol": "qt",
+            "factors": {
+                "default": "1.136 522 97 E-03"
+            }
+        },
+        "us liquid quart": {
+            "key": "us liquid quart",
+            "singular": "US quart (liquid)",
+            "plural": "US quarts (liquid)",
+            "symbol": "qt",
+            "factors": {
+                "default": "9.463 529 E-04"
+            }
+        },
+        "us dry quart": {
+            "key": "us dry quart",
+            "singular": "US quart (dry)",
+            "plural": "US quarts (dry)",
+            "symbol": "qt",
+            "factors": {
+                "default": "1.101 221 E-03"
+            }
+        },
+        "tablespoon": {
+            "key": "tablespoon",
+            "singular": "tablespoon",
+            "plural": "tablespoons",
+            "symbol": "tbsp",
+            "factors": {
+                "default": "1.478 676 E-05"
+            }
+        },
+        "teaspoon": {
+            "key": "teaspoon",
+            "singular": "teaspoon",
+            "plural": "teaspoons",
+            "symbol": "tspn",
+            "factors": {
+                "default": "4.928 922 E-06"
+            }
+        }
+    },
+    "weight": {
+        "milligram": {
+            "key": "milligram",
+            "singular": "milligram",
+            "plural": "milligrams",
+            "symbol": "mg",
+            "factors": {
+                "default": "0.000001"
+            }
+        },
+        "gram": {
+            "key": "gram",
+            "singular": "gram",
+            "plural": "grams",
+            "symbol": "g",
+            "factors": {
+                "default": "0.001"
+            }
+        },
+        "kilogram": {
+            "key": "kilogram",
+            "singular": "kilogram",
+            "plural": "kilograms",
+            "symbol": "kg",
+            "factors": {
+                "default": "1"
+            }
+        },
+        "carat": {
+            "key": "carat",
+            "singular": "carat",
+            "plural": "carats",
+            "symbol": "CD",
+            "factors": {
+                "default": "2.0 E-04"
+            }
+        },
+        "grain": {
+            "key": "grain",
+            "singular": "grain",
+            "plural": "grains",
+            "symbol": "gr",
+            "factors": {
+                "default": "6.479 891 E-05"
+            }
+        },
+        "ounce": {
+            "key": "ounce",
+            "singular": "ounce",
+            "plural": "ounces",
+            "symbol": "oz",
+            "factors": {
+                "default": "2.834 952 E-02"
+            }
+        },
+        "pennyweight": {
+            "key": "pennyweight",
+            "singular": "pennyweight",
+            "plural": "pennyweights",
+            "symbol": "dwt",
+            "factors": {
+                "default": "1.555 174 E-03"
+            }
+        },
+        "pound": {
+            "key": "pound",
+            "singular": "pound",
+            "plural": "pounds",
+            "symbol": "lb",
+            "factors": {
+                "default": "4.535 924 E-01"
+            }
+        },
+        "stone": {
+            "key": "stone",
+            "singular": "stone",
+            "plural": "stones",
+            "symbol": "st",
+            "factors": {
+                "default": "6.35029318"
+            }
+        },
+        "slug": {
+            "key": "slug",
+            "singular": "slug",
+            "plural": "slugs",
+            "symbol": "slug",
+            "factors": {
+                "default": "1.459 390 E+01"
+            }
+        },
+        "metric ton": {
+            "key": "metric ton",
+            "singular": "metric ton",
+            "plural": "metric tons",
+            "symbol": "t",
+            "factors": {
+                "default": "1.0 E+03"
+            }
+        },
+        "long ton": {
+            "key": "long ton",
+            "singular": "long ton",
+            "plural": "long tons",
+            "symbol": "t",
+            "factors": {
+                "default": "1.016 047 E+03"
+            }
+        },
+        "short ton": {
+            "key": "short ton",
+            "singular": "short ton",
+            "plural": "short tons",
+            "symbol": "t",
+            "factors": {
+                "default": "9.071 847 E+02"
+            }
+        }
+    },
+    "area": {
+        "acre": {
+            "key": "acre",
+            "singular": "acre",
+            "plural": "acres",
+            "symbol": "acre",
+            "factors": {
+                "default": "4.046 873 E+03"
+            }
+        },
+        "are": {
+            "key": "are",
+            "singular": "are",
+            "plural": "ares",
+            "symbol": "a",
+            "factors": {
+                "default": "1.0 E+02"
+            }
+        },
+        "hectare": {
+            "key": "hectare",
+            "singular": "hectare",
+            "plural": "hectares",
+            "symbol": "ha",
+            "factors": {
+                "default": "1.0 E+04"
+            }
+        },
+        "square foot": {
+            "key": "square foot",
+            "singular": "square foot",
+            "plural": "square feet",
+            "symbol": "ft2",
+            "factors": {
+                "default": "9.290 304 E-02"
+            }
+        },
+        "square meter": {
+            "key": "square meter",
+            "singular": "square meter",
+            "plural": "square meters",
+            "symbol": "m2",
+            "factors": {
+                "default": "1"
+            }
+        },
+        "square kilometer": {
+            "key": "square kilometer",
+            "singular": "square kilometer",
+            "plural": "square kilometers",
+            "symbol": "km2",
+            "factors": {
+                "default": "1000000"
+            }
+        },
+        "square inch": {
+            "key": "square inch",
+            "singular": "square inch",
+            "plural": "square inches",
+            "symbol": "in2",
+            "factors": {
+                "default": "6.4516 E-04"
+            }
+        },
+        "square yard": {
+            "key": "square yard",
+            "singular": "square yard",
+            "plural": "square yards",
+            "symbol": "yd2",
+            "factors": {
+                "default": "8.361 274 E-01"
+            }
+        },
+        "square mile": {
+            "key": "square mile",
+            "singular": "square mile",
+            "plural": "square miles",
+            "symbol": "mi2",
+            "factors": {
+                "default": "2.589 988 E+06"
+            }
+        },
+        "aankadam": {
+            "key": "aankadam",
+            "singular": "aankadam",
+            "plural": "aankadam",
+            "symbol": "aankadam",
+            "factors": {
+                "default": "6.69"
+            }
+        },
+        "perch": {
+            "key": "perch",
+            "singular": "perch",
+            "plural": "perches",
+            "symbol": "perch",
+            "factors": {
+                "default": "25.29"
+            }
+        },
+        "cent": {
+            "key": "cent",
+            "singular": "cent",
+            "plural": "cents",
+            "symbol": "cent",
+            "factors": {
+                "default": "40.47"
+            }
+        },
+        "chatak": {
+            "key": "chatak",
+            "singular": "chatak",
+            "plural": "chataks",
+            "symbol": "chatak",
+            "factors": {
+                "default": "41.81"
+            }
+        },
+        "kottah": {
+            "key": "kottah",
+            "singular": "kottah (B)",
+            "plural": "kottah (B)",
+            "symbol": "kottah (B)",
+            "factors": {
+                "default": "66.89"
+            }
+        },
+        "guntha": {
+            "key": "guntha",
+            "singular": "guntha",
+            "plural": "guntha",
+            "symbol": "guntha",
+            "factors": {
+                "default": "101.17"
+            }
+        },
+        "ground": {
+            "key": "ground",
+            "singular": "ground",
+            "plural": "grounds",
+            "symbol": "ground",
+            "factors": {
+                "default": "222.97"
+            }
+        },
+        "marla": {
+            "key": "marla",
+            "singular": "marla",
+            "plural": "marla",
+            "symbol": "marla",
+            "factors": {
+                "default": "501.68"
+            }
+        },
+        "rood": {
+            "key": "rood",
+            "singular": "rood",
+            "plural": "roods",
+            "symbol": "rood",
+            "factors": {
+                "default": "1011.71"
+            }
+        },
+        "bigha I": {
+            "key": "bigha I",
+            "singular": "bigha I",
+            "plural": "bigha I",
+            "symbol": "bigha I",
+            "factors": {
+                "default": "1618.74"
+            }
+        },
+        "bigha II": {
+            "key": "bigha II",
+            "singular": "bigha II",
+            "plural": "bigha II",
+            "symbol": "bigha II",
+            "factors": {
+                "default": "2529.29"
+            }
+        },
+        "kanal": {
+            "key": "kanal",
+            "singular": "kanal",
+            "plural": "kanal",
+            "symbol": "kanal",
+            "factors": {
+                "default": "10033.53"
+            }
+        },
+        "biswa I": {
+            "key": "biswa I",
+            "singular": "biswa I",
+            "plural": "biswa I",
+            "symbol": "biswa I",
+            "factors": {
+                "default": "32374.85"
+            }
+        },
+        "biswa II": {
+            "key": "biswa II",
+            "singular": "biswa II",
+            "plural": "biswa II",
+            "symbol": "biswa II",
+            "factors": {
+                "default": "50585.71"
+            }
+        }
+    },
+    "pressure": {
+        "pascal": {
+            "key": "pascal",
+            "singular": "pascal",
+            "plural": "pascal",
+            "symbol": "Pa",
+            "factors": {
+                "default": "1"
+            }
+        },
+        "torr": {
+            "key": "torr",
+            "singular": "torr",
+            "plural": "torr",
+            "symbol": "Torr",
+            "factors": {
+                "default": "1.333 224 E+02"
+            }
+        },
+        "bar": {
+            "key": "bar",
+            "singular": "bar",
+            "plural": "bars",
+            "symbol": "bar",
+            "factors": {
+                "default": "1.0 E+05"
+            }
+        },
+        "millibar": {
+            "key": "millibar",
+            "singular": "millibar",
+            "plural": "millibars",
+            "symbol": "mb",
+            "factors": {
+                "default": "100"
+            }
+        },
+        "psi": {
+            "key": "psi",
+            "singular": "psi",
+            "plural": "psi",
+            "symbol": "lbf\/in2",
+            "factors": {
+                "default": "6.894 757 E+03"
+            }
+        }
+    },
+    "time": {
+        "day": {
+            "key": "day",
+            "singular": "day",
+            "plural": "days",
+            "symbol": "d",
+            "factors": {
+                "default": "8.64 E+04"
+            }
+        },
+        "hour": {
+            "key": "hour",
+            "singular": "hour",
+            "plural": "hours",
+            "symbol": "h",
+            "factors": {
+                "default": "3.6 E+03"
+            }
+        },
+        "minute": {
+            "key": "minute",
+            "singular": "minute",
+            "plural": "minutes",
+            "symbol": "min",
+            "factors": {
+                "default": "6 E+01"
+            }
+        },
+        "year": {
+            "key": "year",
+            "singular": "year",
+            "plural": "years",
+            "symbol": "yr",
+            "factors": {
+                "default": "3.1536 E+07"
+            }
+        }
+    },
+    "temperature": {
+        "celsius": {
+            "key": "celsius",
+            "singular": "celsius",
+            "plural": "celsius",
+            "symbol": "\u00b0C",
+            "factors": {
+                "fahrenheit": "(t\/\u00b0F \u2013 32)\/1.8",
+                "kelvin": "T\/K - 273.15"
+            }
+        },
+        "fahrenheit": {
+            "key": "fahrenheit",
+            "singular": "fahrenheit",
+            "plural": "fahrenheit",
+            "symbol": "\u00b0F",
+            "factors": {
+                "celsius": "(t\/\u00b0C*1.8)+32",
+                "kelvin": "((T\/K-273.15)*1.8)+32"
+            }
+        },
+        "kelvin": {
+            "key": "kelvin",
+            "singular": "kelvin",
+            "plural": "kelvin",
+            "symbol": "K",
+            "factors": {
+                "celsius": "t\/\u00b0C + 273.15",
+                "fahrenheit": "(t\/\u00b0F + 459.67)\/1.8"
+            }
+        }
+    }
+}
