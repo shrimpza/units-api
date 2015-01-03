@@ -30,6 +30,13 @@ class UnitsAPITest extends PHPUnit_Framework_TestCase {
         $this->assertEquals('fahrenheit', $result['to']['unit']['key']);
     }
 
+    public function testGetUnits() {
+        $units = $this->api->units();
+
+        $this->assertTrue(array_key_exists('milligram', $units));
+        $this->assertEquals('time', $units['day']['kind']);
+    }
+
     /**
      * @expectedException ConversionException
      */
