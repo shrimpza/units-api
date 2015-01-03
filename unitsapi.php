@@ -1,8 +1,9 @@
 <?php
-/*
-$api = new UnitsAPI();
-print_r($api->convert(5, 'kilometer', 'mile'));
+
+/*$api = new UnitsAPI();
+print_r($api->convert(5, 'celsius', 'kelvin'));
 */
+
 class UnitsAPI {
 
     private $units;
@@ -11,15 +12,19 @@ class UnitsAPI {
         $this->units = $this->loadUnits();
     }
 
-    function convert($value, $from, $to) {
+    public function units() {
+        return $this->units;
+    }
+
+    public function convert($value, $from, $to) {
         // Only accept numeric values.
         if (!is_numeric($value)) {
-            die('Unit conversion value must be numeric.');
+            throw new ConversionException('Unit conversion value must be numeric.');
         }
 
         // Check to see if the unit key was found in the array.
         if (!isset($this->units[$from]) || !isset($this->units[$to])) {
-            die('Cannot find the specified measurement units.');
+            throw new ConversionException('Cannot find the specified measurement units.');
         }
 
         $unitFrom = $this->units[$from];
@@ -27,14 +32,13 @@ class UnitsAPI {
 
         // Only convert with like kinds
         if ($unitFrom['kind'] != $unitTo['kind']) {
-            die('Cannot convert between different kinds of measurement units.');
+            throw new ConversionException('Cannot convert between different kinds of measurement units.');
         }
 
         // Execute the conversion factors differently based on the kind.  For example, temperature needs to be executed differently.
         switch ($unitFrom['kind']) {
             case 'temperature':
-                die('TODO temperature');
-                //$result = _unitsapi_convert_temperature($value, $unitTo['factor'][$from]);
+                $result = $this->convertTemperature($value, $unitTo['factors'][$from]);
                 break;
             default:
                 $from_si = $unitFrom['factors']['default'];
@@ -58,6 +62,25 @@ class UnitsAPI {
         );
     }
 
+    private function convertTemperature($value, $factor) {
+
+        // Security note: Execute a variety of checks to make sure the equation is not something mischievous
+        $equation = str_replace(array('t/°C', 't/°F', 'T/K'), $value, $factor);
+        $equation = preg_replace('/\s+/', '', $equation);
+
+        $number = '((?:0|[1-9]\d*)(?:\.\d*)?(?:[eE][+\-]?\d+)?)';
+        $operators = '[\/*\^\+-,]';
+        $regexp = '/^([+-]?('.$number.'|'.'\s*\((?1)+\)|\((?1)+\))(?:'.$operators.'(?1))?)+$/';
+
+        if (preg_match($regexp, $equation)) {
+            eval('$result = '.$equation.';');
+        } else {
+            throw new ConversionException("Invalid temperature conversion equation");
+        }
+
+        return $result;
+    }
+
     private function loadUnits() {
         $units = array();
 
@@ -76,6 +99,10 @@ class UnitsAPI {
 
         return $units;
     }
+}
+
+class ConversionException extends Exception {
+
 }
 
 ?>
