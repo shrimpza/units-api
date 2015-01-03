@@ -56,6 +56,10 @@ class UnitsAPITest extends PHPUnit_Framework_TestCase {
     public function testInvalidKinds() {
         $this->api->convert(1, 'hour', 'meter');
     }
+
+    public function testFailure() {
+        $this->assertEquals(false, true);
+    }
 }
 
 ?>
