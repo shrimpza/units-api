@@ -1,9 +1,5 @@
 <?php
 
-/*$api = new UnitsAPI();
-print_r($api->convert(5, 'celsius', 'kelvin'));
-*/
-
 class UnitsAPI {
 
     private $units;
