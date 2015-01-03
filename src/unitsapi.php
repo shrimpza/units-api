@@ -18,13 +18,13 @@ class UnitsAPI {
             throw new ConversionException('Unit conversion value must be numeric.');
         }
 
+        $unitFrom = $this->findUnit($from);
+        $unitTo = $this->findUnit($to);
+
         // Check to see if the unit key was found in the array.
-        if (!isset($this->units[$from]) || !isset($this->units[$to])) {
+        if (!isset($unitFrom) || !isset($unitTo)) {
             throw new ConversionException('Cannot find the specified measurement units.');
         }
-
-        $unitFrom = $this->units[$from];
-        $unitTo = $this->units[$to];
 
         // Only convert with like kinds
         if ($unitFrom['kind'] != $unitTo['kind']) {
@@ -72,6 +72,23 @@ class UnitsAPI {
             eval('$result = '.$equation.';');
         } else {
             throw new ConversionException("Invalid temperature conversion equation");
+        }
+
+        return $result;
+    }
+
+    private function findUnit($unit) {
+        $result = array_key_exists($unit, $this->units) ? $this->units[$unit] : null;
+
+        if (!isset($result)) {
+            foreach ($this->units as $k => $v) {
+                if ((strtolower($v['singular']) == strtolower($unit))
+                    || (strtolower($v['plural']) == strtolower($unit))
+                    || (strtolower($v['symbol']) == strtolower($unit))) {
+                    $result= $v;
+                    break;
+                }
+            }
         }
 
         return $result;

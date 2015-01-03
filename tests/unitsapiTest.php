@@ -37,6 +37,14 @@ class UnitsAPITest extends PHPUnit_Framework_TestCase {
         $this->assertEquals('time', $units['day']['kind']);
     }
 
+    public function testWithOtherUnitsUnit() {
+        $this->assertTrue(null !== $this->api->convert(1, 'celsius', 'K'));
+        $this->assertTrue(null !== $this->api->convert(1, 'kg', 'pounds'));
+
+        $this->setExpectedException('ConversionException');
+        $this->api->convert(1, 'kg', 'cows');
+    }
+
     /**
      * @expectedException ConversionException
      */
