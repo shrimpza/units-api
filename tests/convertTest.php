@@ -20,6 +20,47 @@ class ConvertTest extends PHPUnit_Framework_TestCase {
         include(dirname(__FILE__) . '/../src/convert.php');
     }
 
+    public function testInvalidValue() {
+        $_GET['value'] = '2.sd';
+        $_GET['from'] = 'kilogram';
+        $_GET['to'] = 'pound';
+
+        $this->setOutputCallback(function($out) {
+            $result = json_decode($out, true);
+
+            $this->assertNotNull($result['error']);
+        });
+
+        include(dirname(__FILE__) . '/../src/convert.php');
+    }
+
+    public function testInvalidUnit() {
+        $_GET['value'] = '1';
+        $_GET['from'] = 'elephant';
+        $_GET['to'] = 'lion';
+
+        $this->setOutputCallback(function($out) {
+            $result = json_decode($out, true);
+
+            $this->assertNotNull($result['error']);
+        });
+
+        include(dirname(__FILE__) . '/../src/convert.php');
+    }
+
+    public function testInvalidKinds() {
+        $_GET['value'] = '1';
+        $_GET['from'] = 'hour';
+        $_GET['to'] = 'meter';
+
+        $this->setOutputCallback(function($out) {
+            $result = json_decode($out, true);
+
+            $this->assertNotNull($result['error']);
+        });
+
+        include(dirname(__FILE__) . '/../src/convert.php');
+    }
 }
 
 ?>
