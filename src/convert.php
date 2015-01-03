@@ -8,8 +8,8 @@ try {
     $result = $api->convert($_GET['value'], $_GET['from'], $_GET['to']);
 
     // remove factors from output
-    unset($result['from']['factors']);
-    unset($result['to']['factors']);
+    unset($result['from']['unit']['factors']);
+    unset($result['to']['unit']['factors']);
 
     echo json_encode($result);
 } catch (Exception $e) {
