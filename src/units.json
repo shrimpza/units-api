@@ -631,13 +631,31 @@
         }
     },
     "time": {
-        "day": {
-            "key": "day",
-            "singular": "day",
-            "plural": "days",
-            "symbol": "d",
+        "millisecond": {
+            "key": "millisecond",
+            "singular": "millisecond",
+            "plural": "milliseconds",
+            "symbol": "ms",
             "factors": {
-                "default": "8.64 E+04"
+                "default": "0.001"
+            }
+        },
+        "second": {
+            "key": "second",
+            "singular": "second",
+            "plural": "seconds",
+            "symbol": "s",
+            "factors": {
+                "default": "1"
+            }
+        },
+        "minute": {
+            "key": "minute",
+            "singular": "minute",
+            "plural": "minutes",
+            "symbol": "min",
+            "factors": {
+                "default": "6 E+01"
             }
         },
         "hour": {
@@ -649,13 +667,13 @@
                 "default": "3.6 E+03"
             }
         },
-        "minute": {
-            "key": "minute",
-            "singular": "minute",
-            "plural": "minutes",
-            "symbol": "min",
+        "day": {
+            "key": "day",
+            "singular": "day",
+            "plural": "days",
+            "symbol": "d",
             "factors": {
-                "default": "6 E+01"
+                "default": "8.64 E+04"
             }
         },
         "year": {
