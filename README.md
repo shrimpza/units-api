@@ -38,7 +38,7 @@ decoupled from Drupal and usable as a hosted service as well as a PHP library.
 ## Usage as a PHP Library:
 
 ```php
-require_once('apth/to/units-api/unitsapi.php');
+require_once('path/to/units-api/unitsapi.php');
 
 $api = new UnitsAPI();
 
