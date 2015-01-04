@@ -6,7 +6,7 @@ Units of measure conversion API, based on the work done by
 [Units API for Drupal](https://www.drupal.org/project/unitsapi), though 
 decoupled from Drupal and usable as a hosted service as well as a PHP library.
 
-## Usage:
+## Usage as a Hosted Service:
 
 **Conversion Request:**
 
@@ -33,4 +33,17 @@ decoupled from Drupal and usable as a hosted service as well as a PHP library.
     }
   }
 }
+```
+
+## Usage as a PHP Library:
+
+```php
+require_once('apth/to/units-api/unitsapi.php');
+
+$api = new UnitsAPI();
+
+$result = $api->convert(5, 'kg', 'lb');
+
+// $result is an associative array with the same structure as the HTTP JSON response
+
 ```
